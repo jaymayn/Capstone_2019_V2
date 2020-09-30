@@ -1,0 +1,20 @@
+extrinsic calibration:
+
+- should object points be increments of the chessboard square size prior to steroeCalibrate, is there any extrinsic info I'm missing ie what is the actual chessboard square size (i guessed 10cm)
+
+point cloud:
+
+- I can apply filtering/noise removal and segmentation methods to the provided ply files however when I convert a depth image to a point cloud and apply any of the above the point cloud becomes unorganized, is this normal am I missing some information that needs to be set in the point cloud
+
+conceptual:
+
+- my plan is to deliver a package of exuctables that can be used a ROS node as part of a larger system
+- the node should subscribe to depth and rgb image_raw topics (possibly others?) and publish an image of the train door mask, door position, geometry and plane 
+- the package will contain two main classes for 2d feature detection using opencv and 3d feature detection using pcl along with a pre trained CNN
+
+Resources:
+
+- what is the expected hardware for operation, is it necessary to perform training using a GPU (I found a C++ freindly deep learning library 'dlib' that provides a CPU version)
+- can I get more data, preferably of the train carriage in rgb and depth 
+
+
